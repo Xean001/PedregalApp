@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ArbolBLL.cs" />
+    <Compile Include="ConteoFrutaBLL.cs" />
+    <Compile Include="CortinaBLL.cs" />
+    <Compile Include="LineaBLL.cs" />
+    <Compile Include="LoteBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrabajadorBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaAccesoDatos\CapaAccesoDatos.csproj">
