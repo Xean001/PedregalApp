@@ -15,6 +15,8 @@ namespace PedregalApp
         bool sideBarExpand;
         bool monitoreoCollapse;
         bool controlCalidadCollapse;
+        bool cosechaRecepcionCollapse;
+        bool empaqueCollapse;
 
         public Form1()
         {
@@ -99,6 +101,65 @@ namespace PedregalApp
         private void btnControlCalidad_Click(object sender, EventArgs e)
         {
             controlCalidadTimer.Start();
+        }
+
+        private void btnCosechaRecepcion_Click(object sender, EventArgs e)
+        {
+            cosechatimer.Start();
+        }
+
+        private void cosechatimer_Tick(object sender, EventArgs e)
+        {
+            if (cosechaRecepcionCollapse)
+            {
+                cosechaRecepcionContainer.Height -= 20;
+                if (cosechaRecepcionContainer.Height == cosechaRecepcionContainer.MinimumSize.Height)
+                {
+                    cosechaRecepcionCollapse = false;
+                    cosechatimer.Stop();
+                }
+            }
+            else
+            {
+                cosechaRecepcionContainer.Height += 20;
+                if (cosechaRecepcionContainer.Height == cosechaRecepcionContainer.MaximumSize.Height)
+                {
+                    cosechaRecepcionCollapse = true;
+                    cosechatimer.Stop();
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void empaqueTimer_Tick(object sender, EventArgs e)
+        {
+            if (empaqueCollapse)
+            {
+                empaqueContainer.Height -= 20;
+                if (empaqueContainer.Height == empaqueContainer.MinimumSize.Height)
+                {
+                    empaqueCollapse = false;
+                    empaqueTimer.Stop();
+                }
+            }
+            else
+            {
+                empaqueContainer.Height += 20;
+                if (empaqueContainer.Height == empaqueContainer.MaximumSize.Height)
+                {
+                    empaqueCollapse = true;
+                    empaqueTimer.Stop();
+                }
+            }
+        }
+
+        private void btnEmpaque_Click(object sender, EventArgs e)
+        {
+            empaqueTimer.Start();   
         }
     }
 }

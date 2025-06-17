@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuBotton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABEFJREFUeF7t3VurVVUYx2Er0lIzDbIo85Dagb5TKIXVB6igFAqLii6KiLroA6RE
+        DAAACwwBP0AiyAAABEFJREFUeF7t3VurVVUYx2Er0lIzDbIo85Dagb5TKIXVB6igFAqLii6KiLroA6RE
         WV+hLjpAKqalHYzACutC81CWdvgPpFmr/brdm/bNmuN54Hf3zrFv5sQ1XWvOsQgAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAID/a2namO6Sprh2DrdzeUFsTs+lQ+mP9Kc0gtq5fDA9k9oFM28r02vp91T9
         AWkstXP81bQizck96etULSaNtS9T+wg2qzbwY6oWkMbe8bQplZalw6k6UOqldm9yTZqh3bBUB0i99USa
@@ -150,5 +150,11 @@
   </metadata>
   <metadata name="controlCalidadTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>279, 21</value>
+  </metadata>
+  <metadata name="cosechatimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>441, 21</value>
+  </metadata>
+  <metadata name="empaqueTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>566, 21</value>
   </metadata>
 </root>
