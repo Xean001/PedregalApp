@@ -72,6 +72,13 @@ namespace PedregalApp
         public void ListarConteo()
         {
             dgvDatos.DataSource = logConteo.Instancia.ListarConteo();
+
+            if (dgvDatos.Columns["id_lot"] != null)
+                dgvDatos.Columns["id_lot"].Visible = false;
+
+            if (dgvDatos.Columns["id_emp"] != null)
+                dgvDatos.Columns["id_emp"].Visible = false;
+            
         }
 
         private void btnNuevo1_Click(object sender, EventArgs e)

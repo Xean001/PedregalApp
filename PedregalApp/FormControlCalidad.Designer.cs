@@ -36,7 +36,12 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnNuevo1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.cmbArbol = new System.Windows.Forms.ComboBox();
+            this.cmbCortina = new System.Windows.Forms.ComboBox();
+            this.cmbLinea = new System.Windows.Forms.ComboBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbLote = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,12 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.cmbLote = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.cmbLinea = new System.Windows.Forms.ComboBox();
-            this.cmbCortina = new System.Windows.Forms.ComboBox();
-            this.cmbArbol = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
@@ -128,7 +127,6 @@
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cmbLote);
-            this.groupBox1.Controls.Add(this.dtpFecha);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -142,12 +140,54 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar Datos";
             // 
-            // dtpFecha
+            // cmbArbol
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(363, 115);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(174, 20);
-            this.dtpFecha.TabIndex = 13;
+            this.cmbArbol.FormattingEnabled = true;
+            this.cmbArbol.Location = new System.Drawing.Point(257, 64);
+            this.cmbArbol.Name = "cmbArbol";
+            this.cmbArbol.Size = new System.Drawing.Size(91, 21);
+            this.cmbArbol.TabIndex = 19;
+            // 
+            // cmbCortina
+            // 
+            this.cmbCortina.FormattingEnabled = true;
+            this.cmbCortina.Location = new System.Drawing.Point(257, 29);
+            this.cmbCortina.Name = "cmbCortina";
+            this.cmbCortina.Size = new System.Drawing.Size(91, 21);
+            this.cmbCortina.TabIndex = 18;
+            // 
+            // cmbLinea
+            // 
+            this.cmbLinea.FormattingEnabled = true;
+            this.cmbLinea.Location = new System.Drawing.Point(53, 65);
+            this.cmbLinea.Name = "cmbLinea";
+            this.cmbLinea.Size = new System.Drawing.Size(121, 21);
+            this.cmbLinea.TabIndex = 17;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(516, 31);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(55, 20);
+            this.txtCantidad.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(373, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 16);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Cantidad de frutos:";
+            // 
+            // cmbLote
+            // 
+            this.cmbLote.FormattingEnabled = true;
+            this.cmbLote.Location = new System.Drawing.Point(53, 30);
+            this.cmbLote.Name = "cmbLote";
+            this.cmbLote.Size = new System.Drawing.Size(121, 21);
+            this.cmbLote.TabIndex = 14;
             // 
             // label6
             // 
@@ -215,55 +255,6 @@
             this.dgvDatos.Size = new System.Drawing.Size(600, 185);
             this.dgvDatos.TabIndex = 11;
             // 
-            // cmbLote
-            // 
-            this.cmbLote.FormattingEnabled = true;
-            this.cmbLote.Location = new System.Drawing.Point(53, 30);
-            this.cmbLote.Name = "cmbLote";
-            this.cmbLote.Size = new System.Drawing.Size(121, 21);
-            this.cmbLote.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(373, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 16);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Cantidad de frutos:";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(516, 31);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(55, 20);
-            this.txtCantidad.TabIndex = 16;
-            // 
-            // cmbLinea
-            // 
-            this.cmbLinea.FormattingEnabled = true;
-            this.cmbLinea.Location = new System.Drawing.Point(53, 65);
-            this.cmbLinea.Name = "cmbLinea";
-            this.cmbLinea.Size = new System.Drawing.Size(121, 21);
-            this.cmbLinea.TabIndex = 17;
-            // 
-            // cmbCortina
-            // 
-            this.cmbCortina.FormattingEnabled = true;
-            this.cmbCortina.Location = new System.Drawing.Point(257, 29);
-            this.cmbCortina.Name = "cmbCortina";
-            this.cmbCortina.Size = new System.Drawing.Size(91, 21);
-            this.cmbCortina.TabIndex = 18;
-            // 
-            // cmbArbol
-            // 
-            this.cmbArbol.FormattingEnabled = true;
-            this.cmbArbol.Location = new System.Drawing.Point(257, 64);
-            this.cmbArbol.Name = "cmbArbol";
-            this.cmbArbol.Size = new System.Drawing.Size(91, 21);
-            this.cmbArbol.TabIndex = 19;
-            // 
             // FormControlCalidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +269,7 @@
             this.Controls.Add(this.btnNuevo1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvDatos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormControlCalidad";
             this.Text = "FormControlCalidad";
             this.groupBox1.ResumeLayout(false);
@@ -297,7 +289,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnNuevo1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

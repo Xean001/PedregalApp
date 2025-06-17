@@ -12,8 +12,6 @@ namespace CapaEntidad
         public int id_lot { get; set; }
         public int id_emp { get; set; }
         public int can_con { get; set; }
-
-        // Propiedades adicionales para mostrar en listas
         public string nom_emp { get; set; }
         public int num_lot { get; set; }
     }
