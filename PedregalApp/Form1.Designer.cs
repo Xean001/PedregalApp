@@ -101,10 +101,11 @@
             this.sideBar.Controls.Add(this.empaqueContainer);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 0);
-            this.sideBar.MaximumSize = new System.Drawing.Size(218, 450);
-            this.sideBar.MinimumSize = new System.Drawing.Size(49, 450);
+            this.sideBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sideBar.MaximumSize = new System.Drawing.Size(291, 554);
+            this.sideBar.MinimumSize = new System.Drawing.Size(65, 554);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(218, 450);
+            this.sideBar.Size = new System.Drawing.Size(291, 554);
             this.sideBar.TabIndex = 0;
             // 
             // panel15
@@ -112,27 +113,30 @@
             this.panel15.Controls.Add(this.label2);
             this.panel15.Controls.Add(this.pictureBox1);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Location = new System.Drawing.Point(4, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(218, 123);
+            this.panel15.Size = new System.Drawing.Size(291, 151);
             this.panel15.TabIndex = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(47, 6);
+            this.label2.Location = new System.Drawing.Point(63, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Menu";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -145,20 +149,22 @@
             this.monitoreoContainer.Controls.Add(this.panel6);
             this.monitoreoContainer.Controls.Add(this.panel2);
             this.monitoreoContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.monitoreoContainer.Location = new System.Drawing.Point(3, 132);
-            this.monitoreoContainer.MaximumSize = new System.Drawing.Size(218, 192);
-            this.monitoreoContainer.MinimumSize = new System.Drawing.Size(218, 48);
+            this.monitoreoContainer.Location = new System.Drawing.Point(4, 163);
+            this.monitoreoContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.monitoreoContainer.MaximumSize = new System.Drawing.Size(291, 236);
+            this.monitoreoContainer.MinimumSize = new System.Drawing.Size(291, 59);
             this.monitoreoContainer.Name = "monitoreoContainer";
-            this.monitoreoContainer.Size = new System.Drawing.Size(218, 48);
+            this.monitoreoContainer.Size = new System.Drawing.Size(291, 59);
             this.monitoreoContainer.TabIndex = 8;
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.btnpoda);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 144);
+            this.panel13.Location = new System.Drawing.Point(0, 177);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(218, 48);
+            this.panel13.Size = new System.Drawing.Size(291, 59);
             this.panel13.TabIndex = 6;
             // 
             // btnpoda
@@ -167,9 +173,10 @@
             this.btnpoda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnpoda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpoda.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnpoda.Location = new System.Drawing.Point(-12, -7);
+            this.btnpoda.Location = new System.Drawing.Point(-16, -9);
+            this.btnpoda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnpoda.Name = "btnpoda";
-            this.btnpoda.Size = new System.Drawing.Size(243, 60);
+            this.btnpoda.Size = new System.Drawing.Size(324, 74);
             this.btnpoda.TabIndex = 3;
             this.btnpoda.Text = "Poda y manejo de canopia";
             this.btnpoda.UseVisualStyleBackColor = false;
@@ -178,9 +185,10 @@
             // 
             this.panel7.Controls.Add(this.btnnutricion);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 96);
+            this.panel7.Location = new System.Drawing.Point(0, 118);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(218, 48);
+            this.panel7.Size = new System.Drawing.Size(291, 59);
             this.panel7.TabIndex = 5;
             // 
             // btnnutricion
@@ -189,9 +197,10 @@
             this.btnnutricion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnutricion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnutricion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnnutricion.Location = new System.Drawing.Point(-12, -9);
+            this.btnnutricion.Location = new System.Drawing.Point(-16, -11);
+            this.btnnutricion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnnutricion.Name = "btnnutricion";
-            this.btnnutricion.Size = new System.Drawing.Size(243, 60);
+            this.btnnutricion.Size = new System.Drawing.Size(324, 74);
             this.btnnutricion.TabIndex = 3;
             this.btnnutricion.Text = "Nutricion y sanidad vegetal";
             this.btnnutricion.UseVisualStyleBackColor = false;
@@ -200,9 +209,10 @@
             // 
             this.panel6.Controls.Add(this.btnEvaluacion);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 48);
+            this.panel6.Location = new System.Drawing.Point(0, 59);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(218, 48);
+            this.panel6.Size = new System.Drawing.Size(291, 59);
             this.panel6.TabIndex = 4;
             // 
             // btnEvaluacion
@@ -211,9 +221,10 @@
             this.btnEvaluacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEvaluacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEvaluacion.Location = new System.Drawing.Point(-12, -9);
+            this.btnEvaluacion.Location = new System.Drawing.Point(-16, -11);
+            this.btnEvaluacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEvaluacion.Name = "btnEvaluacion";
-            this.btnEvaluacion.Size = new System.Drawing.Size(243, 60);
+            this.btnEvaluacion.Size = new System.Drawing.Size(324, 74);
             this.btnEvaluacion.TabIndex = 3;
             this.btnEvaluacion.Text = "Evaluacion Anual del Arbol";
             this.btnEvaluacion.UseVisualStyleBackColor = false;
@@ -223,8 +234,9 @@
             this.panel2.Controls.Add(this.btnMoniBiolo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(218, 48);
+            this.panel2.Size = new System.Drawing.Size(291, 59);
             this.panel2.TabIndex = 1;
             // 
             // btnMoniBiolo
@@ -232,10 +244,11 @@
             this.btnMoniBiolo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoniBiolo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMoniBiolo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMoniBiolo.Location = new System.Drawing.Point(-12, -7);
-            this.btnMoniBiolo.MinimumSize = new System.Drawing.Size(237, 64);
+            this.btnMoniBiolo.Location = new System.Drawing.Point(-16, -9);
+            this.btnMoniBiolo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMoniBiolo.MinimumSize = new System.Drawing.Size(316, 79);
             this.btnMoniBiolo.Name = "btnMoniBiolo";
-            this.btnMoniBiolo.Size = new System.Drawing.Size(249, 64);
+            this.btnMoniBiolo.Size = new System.Drawing.Size(332, 79);
             this.btnMoniBiolo.TabIndex = 3;
             this.btnMoniBiolo.Text = "Monitoreo Biologico";
             this.btnMoniBiolo.UseVisualStyleBackColor = true;
@@ -247,11 +260,12 @@
             this.controlCalidadContainer.Controls.Add(this.panel10);
             this.controlCalidadContainer.Controls.Add(this.panel8);
             this.controlCalidadContainer.Controls.Add(this.panel3);
-            this.controlCalidadContainer.Location = new System.Drawing.Point(3, 186);
-            this.controlCalidadContainer.MaximumSize = new System.Drawing.Size(218, 194);
-            this.controlCalidadContainer.MinimumSize = new System.Drawing.Size(218, 46);
+            this.controlCalidadContainer.Location = new System.Drawing.Point(4, 230);
+            this.controlCalidadContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.controlCalidadContainer.MaximumSize = new System.Drawing.Size(291, 239);
+            this.controlCalidadContainer.MinimumSize = new System.Drawing.Size(291, 57);
             this.controlCalidadContainer.Name = "controlCalidadContainer";
-            this.controlCalidadContainer.Size = new System.Drawing.Size(218, 46);
+            this.controlCalidadContainer.Size = new System.Drawing.Size(291, 57);
             this.controlCalidadContainer.TabIndex = 6;
             // 
             // panel9
@@ -259,9 +273,10 @@
             this.panel9.BackColor = System.Drawing.Color.Salmon;
             this.panel9.Controls.Add(this.button6);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 144);
+            this.panel9.Location = new System.Drawing.Point(0, 177);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(218, 48);
+            this.panel9.Size = new System.Drawing.Size(291, 59);
             this.panel9.TabIndex = 9;
             // 
             // button6
@@ -269,9 +284,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(-15, -14);
+            this.button6.Location = new System.Drawing.Point(-20, -17);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(243, 64);
+            this.button6.Size = new System.Drawing.Size(324, 79);
             this.button6.TabIndex = 8;
             this.button6.Text = "Caida de fruta";
             this.button6.UseVisualStyleBackColor = true;
@@ -281,9 +297,10 @@
             this.panel10.BackColor = System.Drawing.Color.Salmon;
             this.panel10.Controls.Add(this.button5);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 96);
+            this.panel10.Location = new System.Drawing.Point(0, 118);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(218, 48);
+            this.panel10.Size = new System.Drawing.Size(291, 59);
             this.panel10.TabIndex = 8;
             // 
             // button5
@@ -291,9 +308,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(-12, -10);
+            this.button5.Location = new System.Drawing.Point(-16, -12);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(243, 64);
+            this.button5.Size = new System.Drawing.Size(324, 79);
             this.button5.TabIndex = 7;
             this.button5.Text = "Categorizacion";
             this.button5.UseVisualStyleBackColor = true;
@@ -303,9 +321,10 @@
             this.panel8.BackColor = System.Drawing.Color.Salmon;
             this.panel8.Controls.Add(this.button2);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 48);
+            this.panel8.Location = new System.Drawing.Point(0, 59);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(218, 48);
+            this.panel8.Size = new System.Drawing.Size(291, 59);
             this.panel8.TabIndex = 6;
             // 
             // button2
@@ -313,9 +332,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(-11, -10);
+            this.button2.Location = new System.Drawing.Point(-15, -12);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(243, 64);
+            this.button2.Size = new System.Drawing.Size(324, 79);
             this.button2.TabIndex = 4;
             this.button2.Text = "Conteo de Fruta";
             this.button2.UseVisualStyleBackColor = true;
@@ -326,8 +346,9 @@
             this.panel3.Controls.Add(this.btnControlCalidad);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(218, 48);
+            this.panel3.Size = new System.Drawing.Size(291, 59);
             this.panel3.TabIndex = 5;
             // 
             // btnControlCalidad
@@ -335,9 +356,10 @@
             this.btnControlCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnControlCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControlCalidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnControlCalidad.Location = new System.Drawing.Point(-11, -7);
+            this.btnControlCalidad.Location = new System.Drawing.Point(-15, -9);
+            this.btnControlCalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnControlCalidad.Name = "btnControlCalidad";
-            this.btnControlCalidad.Size = new System.Drawing.Size(243, 64);
+            this.btnControlCalidad.Size = new System.Drawing.Size(324, 79);
             this.btnControlCalidad.TabIndex = 4;
             this.btnControlCalidad.Text = "Control de Calidad";
             this.btnControlCalidad.UseVisualStyleBackColor = true;
@@ -348,11 +370,12 @@
             this.cosechaRecepcionContainer.Controls.Add(this.panel12);
             this.cosechaRecepcionContainer.Controls.Add(this.panel11);
             this.cosechaRecepcionContainer.Controls.Add(this.panel4);
-            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(3, 238);
-            this.cosechaRecepcionContainer.MaximumSize = new System.Drawing.Size(243, 145);
-            this.cosechaRecepcionContainer.MinimumSize = new System.Drawing.Size(243, 48);
+            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(4, 295);
+            this.cosechaRecepcionContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cosechaRecepcionContainer.MaximumSize = new System.Drawing.Size(324, 178);
+            this.cosechaRecepcionContainer.MinimumSize = new System.Drawing.Size(324, 59);
             this.cosechaRecepcionContainer.Name = "cosechaRecepcionContainer";
-            this.cosechaRecepcionContainer.Size = new System.Drawing.Size(243, 48);
+            this.cosechaRecepcionContainer.Size = new System.Drawing.Size(324, 59);
             this.cosechaRecepcionContainer.TabIndex = 1;
             // 
             // panel12
@@ -360,9 +383,10 @@
             this.panel12.BackColor = System.Drawing.Color.IndianRed;
             this.panel12.Controls.Add(this.btnTrazabilidad);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 96);
+            this.panel12.Location = new System.Drawing.Point(0, 118);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(243, 48);
+            this.panel12.Size = new System.Drawing.Size(324, 59);
             this.panel12.TabIndex = 4;
             // 
             // btnTrazabilidad
@@ -371,9 +395,10 @@
             this.btnTrazabilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrazabilidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrazabilidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTrazabilidad.Location = new System.Drawing.Point(-22, -15);
+            this.btnTrazabilidad.Location = new System.Drawing.Point(-29, -18);
+            this.btnTrazabilidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTrazabilidad.Name = "btnTrazabilidad";
-            this.btnTrazabilidad.Size = new System.Drawing.Size(283, 64);
+            this.btnTrazabilidad.Size = new System.Drawing.Size(377, 79);
             this.btnTrazabilidad.TabIndex = 9;
             this.btnTrazabilidad.Text = "Trazabilidad";
             this.btnTrazabilidad.UseVisualStyleBackColor = false;
@@ -383,9 +408,10 @@
             this.panel11.BackColor = System.Drawing.Color.IndianRed;
             this.panel11.Controls.Add(this.btnCosecha);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 48);
+            this.panel11.Location = new System.Drawing.Point(0, 59);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(243, 48);
+            this.panel11.Size = new System.Drawing.Size(324, 59);
             this.panel11.TabIndex = 3;
             // 
             // btnCosecha
@@ -394,9 +420,10 @@
             this.btnCosecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCosecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCosecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCosecha.Location = new System.Drawing.Point(-22, -7);
+            this.btnCosecha.Location = new System.Drawing.Point(-29, -9);
+            this.btnCosecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCosecha.Name = "btnCosecha";
-            this.btnCosecha.Size = new System.Drawing.Size(283, 64);
+            this.btnCosecha.Size = new System.Drawing.Size(377, 79);
             this.btnCosecha.TabIndex = 10;
             this.btnCosecha.Text = "Orden Cosecha";
             this.btnCosecha.UseVisualStyleBackColor = false;
@@ -407,8 +434,9 @@
             this.panel4.Controls.Add(this.btnCosechaRecepcion);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(243, 48);
+            this.panel4.Size = new System.Drawing.Size(324, 59);
             this.panel4.TabIndex = 2;
             // 
             // btnCosechaRecepcion
@@ -416,9 +444,10 @@
             this.btnCosechaRecepcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCosechaRecepcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCosechaRecepcion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCosechaRecepcion.Location = new System.Drawing.Point(-18, -5);
+            this.btnCosechaRecepcion.Location = new System.Drawing.Point(-24, -6);
+            this.btnCosechaRecepcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCosechaRecepcion.Name = "btnCosechaRecepcion";
-            this.btnCosechaRecepcion.Size = new System.Drawing.Size(262, 64);
+            this.btnCosechaRecepcion.Size = new System.Drawing.Size(349, 79);
             this.btnCosechaRecepcion.TabIndex = 9;
             this.btnCosechaRecepcion.Text = "Cosecha y recepcion";
             this.btnCosechaRecepcion.UseVisualStyleBackColor = true;
@@ -430,11 +459,12 @@
             this.empaqueContainer.Controls.Add(this.panel1);
             this.empaqueContainer.Controls.Add(this.panel5);
             this.empaqueContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.empaqueContainer.Location = new System.Drawing.Point(3, 292);
-            this.empaqueContainer.MaximumSize = new System.Drawing.Size(218, 96);
-            this.empaqueContainer.MinimumSize = new System.Drawing.Size(218, 48);
+            this.empaqueContainer.Location = new System.Drawing.Point(4, 362);
+            this.empaqueContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.empaqueContainer.MaximumSize = new System.Drawing.Size(291, 118);
+            this.empaqueContainer.MinimumSize = new System.Drawing.Size(291, 59);
             this.empaqueContainer.Name = "empaqueContainer";
-            this.empaqueContainer.Size = new System.Drawing.Size(218, 48);
+            this.empaqueContainer.Size = new System.Drawing.Size(291, 59);
             this.empaqueContainer.TabIndex = 7;
             // 
             // panel1
@@ -442,9 +472,10 @@
             this.panel1.BackColor = System.Drawing.Color.Salmon;
             this.panel1.Controls.Add(this.btnClasificacionFinal);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 48);
+            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(218, 48);
+            this.panel1.Size = new System.Drawing.Size(291, 59);
             this.panel1.TabIndex = 8;
             // 
             // btnClasificacionFinal
@@ -452,9 +483,10 @@
             this.btnClasificacionFinal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClasificacionFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClasificacionFinal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnClasificacionFinal.Location = new System.Drawing.Point(-12, -11);
+            this.btnClasificacionFinal.Location = new System.Drawing.Point(-16, -14);
+            this.btnClasificacionFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClasificacionFinal.Name = "btnClasificacionFinal";
-            this.btnClasificacionFinal.Size = new System.Drawing.Size(243, 64);
+            this.btnClasificacionFinal.Size = new System.Drawing.Size(324, 79);
             this.btnClasificacionFinal.TabIndex = 8;
             this.btnClasificacionFinal.Text = "Clasificacion Final";
             this.btnClasificacionFinal.UseVisualStyleBackColor = true;
@@ -464,8 +496,9 @@
             this.panel5.Controls.Add(this.btnEmpaque);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(218, 48);
+            this.panel5.Size = new System.Drawing.Size(291, 59);
             this.panel5.TabIndex = 2;
             // 
             // btnEmpaque
@@ -473,9 +506,10 @@
             this.btnEmpaque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpaque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpaque.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEmpaque.Location = new System.Drawing.Point(-12, -7);
+            this.btnEmpaque.Location = new System.Drawing.Point(-16, -9);
+            this.btnEmpaque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEmpaque.Name = "btnEmpaque";
-            this.btnEmpaque.Size = new System.Drawing.Size(243, 64);
+            this.btnEmpaque.Size = new System.Drawing.Size(324, 79);
             this.btnEmpaque.TabIndex = 6;
             this.btnEmpaque.Text = "Empaque ";
             this.btnEmpaque.UseVisualStyleBackColor = true;
@@ -508,10 +542,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.sideBar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
