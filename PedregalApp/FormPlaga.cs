@@ -23,30 +23,36 @@ namespace PedregalApp
         {
             using (SqlConnection con = new SqlConnection(cadenaConexion))
             {
-                string query = "SELECT * FROM Plaga";
+                string query = "SELECT IdPlaga, NombrePlaga, TipoPlaga, Descripcion, Habilitado FROM Plaga";
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvPlagas.DataSource = dt;
+
+               
+                if (dgvPlagas.Columns.Contains("Habilitado"))
+                {
+                    dgvPlagas.Columns["Habilitado"].ReadOnly = false;
+                    dgvPlagas.Columns["Habilitado"].DefaultCellStyle.NullValue = false;
+
+              
+                    DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+                    chk.DataPropertyName = "Habilitado";
+                    chk.HeaderText = "Habilitado";
+                    chk.Name = "Habilitado";
+
+                    int colIndex = dgvPlagas.Columns["Habilitado"].Index;
+                    dgvPlagas.Columns.Remove("Habilitado");
+                    dgvPlagas.Columns.Insert(colIndex, chk);
+                }
+
+                dgvPlagas.Columns["IdPlaga"].Visible = false; 
             }
         }
 
         private void FormPlaga_Load(object sender, EventArgs e)
         {
-            string cadenaConexion = "Server=DESKTOP-QV8AA6N;Database=Pedregal;Integrated Security=true";
-            using (SqlConnection con = new SqlConnection(cadenaConexion))
-            {
-                try
-                {
-                    con.Open();
-                    MessageBox.Show("Conexión exitosa");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-            CargarPlagas();
+  
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -61,6 +67,7 @@ namespace PedregalApp
                     cmd.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text);
                     cmd.Parameters.AddWithValue("@Habilitado", cbkHabilitado.Checked);
 
+
                     try
                     {
                         con.Open();
@@ -73,18 +80,36 @@ namespace PedregalApp
                         MessageBox.Show("Error al registrar: " + ex.Message);
                     }
                 }
+
             }
+            CargarPlagas();
+
         }
 
         private void dgvPlagas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.ColumnIndex >= 0 && dgvPlagas.Columns[e.ColumnIndex].Name == "Habilitado")
             {
-                DataGridViewRow fila = dgvPlagas.Rows[e.RowIndex];
-                txtNombrePlaga.Text = fila.Cells["Nombre"].Value.ToString();
-                cmbTipoPlaga.Text = fila.Cells["Tipo"].Value.ToString();
-                txtDescripcion.Text = fila.Cells["Descripcion"].Value.ToString();
-                cbkHabilitado.Checked = Convert.ToBoolean(fila.Cells["Habilitado"].Value);
+                int id = Convert.ToInt32(dgvPlagas.Rows[e.RowIndex].Cells["IdPlaga"].Value);
+                bool nuevoValor = Convert.ToBoolean(dgvPlagas.Rows[e.RowIndex].Cells["Habilitado"].Value);
+
+                using (SqlConnection con = new SqlConnection(cadenaConexion))
+                {
+                    string query = "UPDATE Plaga SET Habilitado = @Habilitado WHERE IdPlaga = @Id";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Habilitado", nuevoValor);
+                    cmd.Parameters.AddWithValue("@Id", id);
+
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al actualizar checkbox: " + ex.Message);
+                    }
+                }
             }
         }
 
@@ -93,13 +118,15 @@ namespace PedregalApp
             if (dgvPlagas.CurrentRow != null)
             {
                 int id = Convert.ToInt32(dgvPlagas.CurrentRow.Cells["IdPlaga"].Value);
+
                 using (SqlConnection con = new SqlConnection(cadenaConexion))
                 {
-                    string query = "UPDATE Plaga SET Nombre=@NombrePlaga, Tipo=@TipoPlaga, Descripcion=@Descripcion, Habilitado=@Habilitado WHERE IdPlaga=@Id";
+                    string query = "UPDATE Plaga SET NombrePlaga=@NombrePlaga, TipoPlaga=@TipoPlaga, Descripcion=@Descripcion, Habilitado=@Habilitado WHERE IdPlaga=@Id";
+
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@Nombre", txtNombrePlaga.Text);
-                        cmd.Parameters.AddWithValue("@Tipo", cmbTipoPlaga.Text);
+                        cmd.Parameters.AddWithValue("@NombrePlaga", txtNombrePlaga.Text);
+                        cmd.Parameters.AddWithValue("@TipoPlaga", cmbTipoPlaga.Text);
                         cmd.Parameters.AddWithValue("@Descripcion", txtDescripcion.Text);
                         cmd.Parameters.AddWithValue("@Habilitado", cbkHabilitado.Checked);
                         cmd.Parameters.AddWithValue("@Id", id);
@@ -109,7 +136,7 @@ namespace PedregalApp
                             con.Open();
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Plaga modificada correctamente.");
-                            CargarPlagas();
+                            CargarPlagas(); // Esto actualiza la grilla
                         }
                         catch (Exception ex)
                         {
@@ -132,33 +159,13 @@ namespace PedregalApp
                     {
                         cmd.Parameters.AddWithValue("@Id", id);
 
-                        try
-                        {
-                            con.Open();
-                            cmd.ExecuteNonQuery();
-                            MessageBox.Show("Plaga inhabilitada.");
-                            CargarPlagas();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error al inhabilitar: " + ex.Message);
-                        }
+                       
                     }
                 }
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection con = new SqlConnection(cadenaConexion))
-            {
-                string query = "SELECT * FROM Plaga WHERE Nombre LIKE @Nombre";
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                da.SelectCommand.Parameters.AddWithValue("@Nombre", "%" + txtBuscarPlaga.Text + "%");
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dgvPlagas.DataSource = dt;
-            }
-        }
+       
+        
     }
 }

@@ -35,16 +35,13 @@
             this.cbkHabilitado = new System.Windows.Forms.CheckBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnInhabilitar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.cmbTipoPlaga = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvPlagas = new System.Windows.Forms.DataGridView();
-            this.txtBuscarPlaga = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlagas)).BeginInit();
             this.SuspendLayout();
@@ -77,10 +74,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbkHabilitado);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.btnInhabilitar);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.cmbTipoPlaga);
@@ -97,7 +92,7 @@
             // cbkHabilitado
             // 
             this.cbkHabilitado.AutoSize = true;
-            this.cbkHabilitado.Location = new System.Drawing.Point(16, 273);
+            this.cbkHabilitado.Location = new System.Drawing.Point(175, 477);
             this.cbkHabilitado.Name = "cbkHabilitado";
             this.cbkHabilitado.Size = new System.Drawing.Size(91, 20);
             this.cbkHabilitado.TabIndex = 8;
@@ -122,15 +117,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Descripción";
             // 
-            // btnInhabilitar
-            // 
-            this.btnInhabilitar.Location = new System.Drawing.Point(310, 309);
-            this.btnInhabilitar.Name = "btnInhabilitar";
-            this.btnInhabilitar.Size = new System.Drawing.Size(141, 53);
-            this.btnInhabilitar.TabIndex = 10;
-            this.btnInhabilitar.Text = "Inhabilitar";
-            this.btnInhabilitar.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -142,7 +128,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(163, 309);
+            this.btnModificar.Location = new System.Drawing.Point(251, 309);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(141, 53);
             this.btnModificar.TabIndex = 11;
@@ -164,23 +150,13 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(16, 309);
+            this.btnRegistrar.Location = new System.Drawing.Point(18, 309);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(141, 53);
             this.btnRegistrar.TabIndex = 9;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(537, 478);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(141, 53);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvPlagas
             // 
@@ -189,25 +165,9 @@
             this.dgvPlagas.Name = "dgvPlagas";
             this.dgvPlagas.RowHeadersWidth = 51;
             this.dgvPlagas.RowTemplate.Height = 24;
-            this.dgvPlagas.Size = new System.Drawing.Size(549, 382);
+            this.dgvPlagas.Size = new System.Drawing.Size(549, 479);
             this.dgvPlagas.TabIndex = 12;
             this.dgvPlagas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlagas_CellContentClick);
-            // 
-            // txtBuscarPlaga
-            // 
-            this.txtBuscarPlaga.Location = new System.Drawing.Point(713, 500);
-            this.txtBuscarPlaga.Name = "txtBuscarPlaga";
-            this.txtBuscarPlaga.Size = new System.Drawing.Size(132, 22);
-            this.txtBuscarPlaga.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(710, 481);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 16);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Introduce nombre de plaga";
             // 
             // button5
             // 
@@ -218,18 +178,24 @@
             this.button5.Text = "Salir";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(158, 504);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(184, 27);
+            this.panel1.TabIndex = 16;
+            // 
             // FormPlaga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.cbkHabilitado);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtBuscarPlaga);
             this.Controls.Add(this.dgvPlagas);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnBuscar);
             this.Name = "FormPlaga";
             this.Text = "CrudPlaga";
             this.Load += new System.EventHandler(this.FormPlaga_Load);
@@ -249,15 +215,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbTipoPlaga;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnInhabilitar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.CheckBox cbkHabilitado;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvPlagas;
-        private System.Windows.Forms.TextBox txtBuscarPlaga;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
     }
 }
