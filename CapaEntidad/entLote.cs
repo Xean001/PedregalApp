@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaAccesoDatos;
-using CapaEntidad;
 
-namespace CapaLogica
+namespace CapaEntidad
 {
-    public class Class1
+  public class entLote
     {
+        public int id_lot { get; set; }
+        public int num_lot { get; set; }
     }
 }

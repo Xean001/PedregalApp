@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class Class1
+    public class entLinea
     {
+        public int id_lin { get; set; }
+        public int id_cor { get; set; }
+        public int num_lin { get; set; }
     }
 }

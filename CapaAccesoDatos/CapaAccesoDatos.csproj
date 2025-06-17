@@ -42,7 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="LoteDAL.cs" />
+    <Compile Include="datArbol.cs" />
+    <Compile Include="datConteo.cs" />
+    <Compile Include="datCortina.cs" />
+    <Compile Include="datEmpleado.cs" />
+    <Compile Include="datLinea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

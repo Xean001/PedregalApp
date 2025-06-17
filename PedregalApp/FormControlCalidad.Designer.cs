@@ -37,17 +37,19 @@
             this.btnNuevo1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtArbol = new System.Windows.Forms.TextBox();
-            this.txtLinea = new System.Windows.Forms.TextBox();
-            this.txtCortina = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtLote = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbEmpCargo = new System.Windows.Forms.ComboBox();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.cmbLote = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.cmbLinea = new System.Windows.Forms.ComboBox();
+            this.cmbCortina = new System.Windows.Forms.ComboBox();
+            this.cmbArbol = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +80,7 @@
             this.btnAgregar.TabIndex = 17;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnDeshabilitar
             // 
@@ -115,20 +118,23 @@
             this.btnNuevo1.TabIndex = 13;
             this.btnNuevo1.Text = "Nuevo";
             this.btnNuevo1.UseVisualStyleBackColor = true;
+            this.btnNuevo1.Click += new System.EventHandler(this.btnNuevo1_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbArbol);
+            this.groupBox1.Controls.Add(this.cmbCortina);
+            this.groupBox1.Controls.Add(this.cmbLinea);
+            this.groupBox1.Controls.Add(this.txtCantidad);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.cmbLote);
             this.groupBox1.Controls.Add(this.dtpFecha);
-            this.groupBox1.Controls.Add(this.txtArbol);
-            this.groupBox1.Controls.Add(this.txtLinea);
-            this.groupBox1.Controls.Add(this.txtCortina);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtLote);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cmbEmpCargo);
+            this.groupBox1.Controls.Add(this.cmbEmpleado);
             this.groupBox1.Location = new System.Drawing.Point(26, 210);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(588, 222);
@@ -143,27 +149,6 @@
             this.dtpFecha.Size = new System.Drawing.Size(174, 20);
             this.dtpFecha.TabIndex = 13;
             // 
-            // txtArbol
-            // 
-            this.txtArbol.Location = new System.Drawing.Point(267, 64);
-            this.txtArbol.Name = "txtArbol";
-            this.txtArbol.Size = new System.Drawing.Size(82, 20);
-            this.txtArbol.TabIndex = 12;
-            // 
-            // txtLinea
-            // 
-            this.txtLinea.Location = new System.Drawing.Point(65, 68);
-            this.txtLinea.Name = "txtLinea";
-            this.txtLinea.Size = new System.Drawing.Size(100, 20);
-            this.txtLinea.TabIndex = 11;
-            // 
-            // txtCortina
-            // 
-            this.txtCortina.Location = new System.Drawing.Point(267, 30);
-            this.txtCortina.Name = "txtCortina";
-            this.txtCortina.Size = new System.Drawing.Size(82, 20);
-            this.txtCortina.TabIndex = 10;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -173,13 +158,6 @@
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "Cortina:";
-            // 
-            // txtLote
-            // 
-            this.txtLote.Location = new System.Drawing.Point(65, 30);
-            this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(100, 20);
-            this.txtLote.TabIndex = 8;
             // 
             // label4
             // 
@@ -221,13 +199,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Lote:";
             // 
-            // cmbEmpCargo
+            // cmbEmpleado
             // 
-            this.cmbEmpCargo.FormattingEnabled = true;
-            this.cmbEmpCargo.Location = new System.Drawing.Point(158, 115);
-            this.cmbEmpCargo.Name = "cmbEmpCargo";
-            this.cmbEmpCargo.Size = new System.Drawing.Size(121, 21);
-            this.cmbEmpCargo.TabIndex = 1;
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Location = new System.Drawing.Point(158, 115);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(121, 21);
+            this.cmbEmpleado.TabIndex = 1;
             // 
             // dgvDatos
             // 
@@ -236,6 +214,55 @@
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(600, 185);
             this.dgvDatos.TabIndex = 11;
+            // 
+            // cmbLote
+            // 
+            this.cmbLote.FormattingEnabled = true;
+            this.cmbLote.Location = new System.Drawing.Point(53, 30);
+            this.cmbLote.Name = "cmbLote";
+            this.cmbLote.Size = new System.Drawing.Size(121, 21);
+            this.cmbLote.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(373, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(137, 16);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Cantidad de frutos:";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(516, 31);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(55, 20);
+            this.txtCantidad.TabIndex = 16;
+            // 
+            // cmbLinea
+            // 
+            this.cmbLinea.FormattingEnabled = true;
+            this.cmbLinea.Location = new System.Drawing.Point(53, 65);
+            this.cmbLinea.Name = "cmbLinea";
+            this.cmbLinea.Size = new System.Drawing.Size(121, 21);
+            this.cmbLinea.TabIndex = 17;
+            // 
+            // cmbCortina
+            // 
+            this.cmbCortina.FormattingEnabled = true;
+            this.cmbCortina.Location = new System.Drawing.Point(257, 29);
+            this.cmbCortina.Name = "cmbCortina";
+            this.cmbCortina.Size = new System.Drawing.Size(91, 21);
+            this.cmbCortina.TabIndex = 18;
+            // 
+            // cmbArbol
+            // 
+            this.cmbArbol.FormattingEnabled = true;
+            this.cmbArbol.Location = new System.Drawing.Point(257, 64);
+            this.cmbArbol.Name = "cmbArbol";
+            this.cmbArbol.Size = new System.Drawing.Size(91, 21);
+            this.cmbArbol.TabIndex = 19;
             // 
             // FormControlCalidad
             // 
@@ -271,16 +298,18 @@
         private System.Windows.Forms.Button btnNuevo1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtArbol;
-        private System.Windows.Forms.TextBox txtLinea;
-        private System.Windows.Forms.TextBox txtCortina;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtLote;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbEmpCargo;
+        private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.ComboBox cmbLote;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbArbol;
+        private System.Windows.Forms.ComboBox cmbCortina;
+        private System.Windows.Forms.ComboBox cmbLinea;
     }
 }

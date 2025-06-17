@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="logArbol.cs" />
+    <Compile Include="logConteo.cs" />
+    <Compile Include="logCortina.cs" />
+    <Compile Include="logEmpleado.cs" />
+    <Compile Include="logLinea.cs" />
+    <Compile Include="logLote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
