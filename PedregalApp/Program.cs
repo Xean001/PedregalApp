@@ -16,7 +16,7 @@ namespace PedregalApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPlaga());
+            Application.Run(new Form1());
         }
     }
 }

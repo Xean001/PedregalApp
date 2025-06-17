@@ -73,6 +73,8 @@ namespace PedregalApp
         {
             dgvDatos.DataSource = logConteo.Instancia.ListarConteo();
 
+            if (dgvDatos.Columns["id_arb"] != null)
+                dgvDatos.Columns["id_arb"].Visible = false;
             if (dgvDatos.Columns["id_lot"] != null)
                 dgvDatos.Columns["id_lot"].Visible = false;
 
@@ -87,7 +89,7 @@ namespace PedregalApp
 
             btnNuevo1.Visible = true;
             LimpiarVariables();
-            btnModificar.Visible = false;
+            btnBuscar.Visible = false;
         }
         private void LimpiarVariables()
         {
@@ -115,6 +117,7 @@ namespace PedregalApp
                 {
                     id_lot = Convert.ToInt32(cmbLote.SelectedValue),
                     id_emp = Convert.ToInt32(cmbEmpleado.SelectedValue),
+                    id_arb = Convert.ToInt32(cmbArbol.SelectedValue),
                     can_con = cantidad
                 };
 

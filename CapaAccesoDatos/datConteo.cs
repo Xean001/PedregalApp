@@ -25,6 +25,7 @@ namespace CapaAccesoDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_lot", c.id_lot);
                 cmd.Parameters.AddWithValue("@id_emp", c.id_emp);
+                cmd.Parameters.AddWithValue("@id_arb", c.id_arb);
                 cmd.Parameters.AddWithValue("@can_con", c.can_con);
                 cn.Open();
                 inserta = cmd.ExecuteNonQuery() > 0;

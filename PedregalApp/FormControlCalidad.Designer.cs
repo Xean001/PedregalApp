@@ -32,7 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnNuevo1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,6 +49,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
@@ -83,25 +85,25 @@
             // 
             // btnDeshabilitar
             // 
-            this.btnDeshabilitar.Location = new System.Drawing.Point(652, 372);
+            this.btnDeshabilitar.Location = new System.Drawing.Point(491, 395);
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Size = new System.Drawing.Size(123, 43);
             this.btnDeshabilitar.TabIndex = 16;
             this.btnDeshabilitar.Text = "Deshabilitar Prov.";
             this.btnDeshabilitar.UseVisualStyleBackColor = true;
             // 
-            // btnModificar
+            // btnBuscar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(652, 298);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(123, 43);
-            this.btnModificar.TabIndex = 15;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(327, 319);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(123, 43);
+            this.btnBuscar.TabIndex = 15;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(652, 228);
+            this.btnNuevo.Location = new System.Drawing.Point(665, 239);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(123, 43);
@@ -135,7 +137,7 @@
             this.groupBox1.Controls.Add(this.cmbEmpleado);
             this.groupBox1.Location = new System.Drawing.Point(26, 210);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(588, 222);
+            this.groupBox1.Size = new System.Drawing.Size(620, 109);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar Datos";
@@ -203,7 +205,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 115);
+            this.label4.Location = new System.Drawing.Point(354, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 16);
             this.label4.TabIndex = 5;
@@ -242,7 +244,7 @@
             // cmbEmpleado
             // 
             this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(158, 115);
+            this.cmbEmpleado.Location = new System.Drawing.Point(493, 68);
             this.cmbEmpleado.Name = "cmbEmpleado";
             this.cmbEmpleado.Size = new System.Drawing.Size(121, 21);
             this.cmbEmpleado.TabIndex = 1;
@@ -255,16 +257,35 @@
             this.dgvDatos.Size = new System.Drawing.Size(600, 185);
             this.dgvDatos.TabIndex = 11;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 342);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(194, 16);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Realizar Consulta por lotes";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(242, 342);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(55, 20);
+            this.textBox1.TabIndex = 21;
+            // 
             // FormControlCalidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnDeshabilitar);
-            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnNuevo1);
             this.Controls.Add(this.groupBox1);
@@ -276,6 +297,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -285,7 +307,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnDeshabilitar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnNuevo1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -302,5 +324,7 @@
         private System.Windows.Forms.ComboBox cmbArbol;
         private System.Windows.Forms.ComboBox cmbCortina;
         private System.Windows.Forms.ComboBox cmbLinea;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
