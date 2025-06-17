@@ -32,20 +32,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbCortina = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbLinea = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTotalFrutos = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnMostrarConteos = new System.Windows.Forms.Button();
-            this.cmbArbol = new System.Windows.Forms.ComboBox();
-            this.cmbLote = new System.Windows.Forms.ComboBox();
             this.cmbTrabajador = new System.Windows.Forms.ComboBox();
             this.dgvConteos = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConteos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,15 +89,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Cortina:";
             // 
-            // cmbCortina
-            // 
-            this.cmbCortina.FormattingEnabled = true;
-            this.cmbCortina.Location = new System.Drawing.Point(180, 85);
-            this.cmbCortina.Name = "cmbCortina";
-            this.cmbCortina.Size = new System.Drawing.Size(82, 21);
-            this.cmbCortina.TabIndex = 5;
-            this.cmbCortina.SelectedIndexChanged += new System.EventHandler(this.cmbCortina_SelectedIndexChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -117,25 +108,6 @@
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 7;
             this.label6.Text = "Arbol:";
-            // 
-            // cmbLinea
-            // 
-            this.cmbLinea.FormattingEnabled = true;
-            this.cmbLinea.Location = new System.Drawing.Point(60, 123);
-            this.cmbLinea.Name = "cmbLinea";
-            this.cmbLinea.Size = new System.Drawing.Size(43, 21);
-            this.cmbLinea.TabIndex = 8;
-            this.cmbLinea.SelectedIndexChanged += new System.EventHandler(this.cmbLinea_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label7.Location = new System.Drawing.Point(16, 182);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = " Nombre del trabajador:";
             // 
             // label8
             // 
@@ -174,23 +146,6 @@
             this.btnMostrarConteos.UseVisualStyleBackColor = true;
             this.btnMostrarConteos.Click += new System.EventHandler(this.btnMostrarConteos_Click);
             // 
-            // cmbArbol
-            // 
-            this.cmbArbol.FormattingEnabled = true;
-            this.cmbArbol.Location = new System.Drawing.Point(180, 123);
-            this.cmbArbol.Name = "cmbArbol";
-            this.cmbArbol.Size = new System.Drawing.Size(43, 21);
-            this.cmbArbol.TabIndex = 16;
-            // 
-            // cmbLote
-            // 
-            this.cmbLote.FormattingEnabled = true;
-            this.cmbLote.Location = new System.Drawing.Point(60, 89);
-            this.cmbLote.Name = "cmbLote";
-            this.cmbLote.Size = new System.Drawing.Size(43, 21);
-            this.cmbLote.TabIndex = 17;
-            this.cmbLote.SelectedIndexChanged += new System.EventHandler(this.cmbLote_SelectedIndexChanged);
-            // 
             // cmbTrabajador
             // 
             this.cmbTrabajador.FormattingEnabled = true;
@@ -217,25 +172,63 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Mostrar consultas:";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.label10.Location = new System.Drawing.Point(35, 182);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(142, 17);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Codigo de empleado:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(60, 89);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(43, 20);
+            this.textBox1.TabIndex = 22;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(179, 89);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(43, 20);
+            this.textBox2.TabIndex = 23;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(60, 123);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(43, 20);
+            this.textBox3.TabIndex = 24;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(179, 123);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(43, 20);
+            this.textBox4.TabIndex = 25;
+            // 
             // ConteoFruta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dgvConteos);
             this.Controls.Add(this.cmbTrabajador);
-            this.Controls.Add(this.cmbLote);
-            this.Controls.Add(this.cmbArbol);
             this.Controls.Add(this.btnMostrarConteos);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtTotalFrutos);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cmbLinea);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cmbCortina);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -253,19 +246,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbCortina;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbLinea;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTotalFrutos;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnMostrarConteos;
-        private System.Windows.Forms.ComboBox cmbArbol;
-        private System.Windows.Forms.ComboBox cmbLote;
         private System.Windows.Forms.ComboBox cmbTrabajador;
         private System.Windows.Forms.DataGridView dgvConteos;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

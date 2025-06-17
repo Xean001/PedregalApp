@@ -129,5 +129,7 @@ namespace PedregalApp
                 MessageBox.Show("Error al mostrar conteos: " + ex.Message);
             }
         }
+
+      
     }
 }
