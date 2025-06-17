@@ -20,7 +20,7 @@ namespace CapaAccesoDatos
 
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source=DESKTOP-3P74SJN\\SQLEXPRESS;Initial Catalog=Pedregal;Integrated Security=true";
+            cn.ConnectionString = "Data Source=UTSILAB412;Initial Catalog=Pedregal;Integrated Security=true";
             return cn;
            
         }

@@ -33,6 +33,10 @@ namespace CapaLogica
         {
             datBin.Instancia.DeshabilitarBin(Bin);
         }
+        public void BuscarBin(entBin Bin)
+        {
+            datBin.Instancia.BuscarBin(Bin);
+        }
         #endregion metodos
 
     }

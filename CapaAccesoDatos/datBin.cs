@@ -120,7 +120,6 @@ namespace CapaAccesoDatos
                 cmd = new SqlCommand("spDeshabilitaBin", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@codigoBin", Bin.codigoBin);
-                cmd.Parameters.AddWithValue("@estadoBin", Bin.estadoBin);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -135,7 +134,42 @@ namespace CapaAccesoDatos
             finally { cmd.Connection.Close(); }
             return delete;
         }
+        public bool BuscarBin(entBin Bin)
+        {
+            SqlCommand cmd = null;
+            SqlDataReader dr = null;
+            bool encontrado = false;
 
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spBuscarBin", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@codigoBin", Bin.codigoBin);
+                cn.Open();
+
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    Bin.fecRegBin = Convert.ToDateTime(dr["fecRegBin"]);
+                    Bin.pesoKg = Convert.ToDecimal(dr["pesoKg"]);
+                    Bin.estadoBin = Convert.ToBoolean(dr["estadoBin"]);
+                    Bin.usoBin = Convert.ToBoolean(dr["usoBin"]);
+                    encontrado = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (dr != null) dr.Close();
+                if (cmd.Connection.State == ConnectionState.Open) cmd.Connection.Close();
+            }
+
+            return encontrado;
+        }
         #endregion metodos
     }
 
