@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PedregalApp
 {
-    public partial class FormPlaga : Form
+    public partial class FormPlaga : Form   
     {
-        string cadenaConexion = "Server=DESKTOP-QV8AA6N;Database=Pedregal;Integrated Security=true";
+        string cadenaConexion = "Server=UTSILAB411;Database=PEDREGAL;Integrated Security=true";
         public FormPlaga()
         {
             InitializeComponent();

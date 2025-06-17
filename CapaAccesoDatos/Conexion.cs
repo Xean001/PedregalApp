@@ -20,7 +20,7 @@ namespace CapaAccesoDatos
 
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Server=DESKTOP-QV8AA6N;Database=Pedregal;Integrated Security=true";
+            cn.ConnectionString = "Server=UTSILAB411;Database=PEDREGAL;Integrated Security=true";
             return cn;
            
         }
