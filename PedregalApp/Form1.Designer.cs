@@ -69,6 +69,7 @@
             this.controlCalidadTimer = new System.Windows.Forms.Timer(this.components);
             this.cosechatimer = new System.Windows.Forms.Timer(this.components);
             this.empaqueTimer = new System.Windows.Forms.Timer(this.components);
+            this.mostrarContenido = new System.Windows.Forms.Panel();
             this.sideBar.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -506,11 +507,19 @@
             this.empaqueTimer.Interval = 10;
             this.empaqueTimer.Tick += new System.EventHandler(this.empaqueTimer_Tick);
             // 
+            // mostrarContenido
+            // 
+            this.mostrarContenido.Location = new System.Drawing.Point(219, 0);
+            this.mostrarContenido.Name = "mostrarContenido";
+            this.mostrarContenido.Size = new System.Drawing.Size(725, 450);
+            this.mostrarContenido.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(947, 450);
+            this.Controls.Add(this.mostrarContenido);
             this.Controls.Add(this.sideBar);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -581,6 +590,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClasificacionFinal;
         private System.Windows.Forms.Timer empaqueTimer;
+        private System.Windows.Forms.Panel mostrarContenido;
     }
 }
 

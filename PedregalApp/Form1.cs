@@ -105,7 +105,17 @@ namespace PedregalApp
 
         private void btnCosechaRecepcion_Click(object sender, EventArgs e)
         {
-            cosechatimer.Start();
+            // cosechatimer.Start();
+            mostrarContenido.Controls.Clear();
+
+            MantenedorContenedor frm = new MantenedorContenedor();
+
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+
+            mostrarContenido.Controls.Add(frm);
+            frm.Show();
         }
 
         private void cosechatimer_Tick(object sender, EventArgs e)
