@@ -17,7 +17,7 @@ namespace PedregalApp
         bool controlCalidadCollapse;
         bool cosechaRecepcionCollapse;
         bool empaqueCollapse;
-
+        FormControlCalidad formControlCalidad;
         public Form1()
         {
             InitializeComponent();
@@ -160,6 +160,26 @@ namespace PedregalApp
         private void btnEmpaque_Click(object sender, EventArgs e)
         {
             empaqueTimer.Start();   
+        }
+
+        private void btnConteo_Click(object sender, EventArgs e)
+        {
+            if (formControlCalidad == null)
+            {
+                formControlCalidad = new FormControlCalidad();
+                formControlCalidad.FormClosed += formControlCalidad_FormClosed;
+                formControlCalidad.MdiParent = this;
+                formControlCalidad.Show();
+            }
+            else
+            {
+                formControlCalidad.Activate();
+            }
+        }
+           
+        private void formControlCalidad_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formControlCalidad = null;
         }
     }
 }

@@ -49,7 +49,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnControlCalidad = new System.Windows.Forms.Button();
             this.cosechaRecepcionContainer = new System.Windows.Forms.Panel();
@@ -69,6 +68,7 @@
             this.controlCalidadTimer = new System.Windows.Forms.Timer(this.components);
             this.cosechatimer = new System.Windows.Forms.Timer(this.components);
             this.empaqueTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnConteo = new System.Windows.Forms.Button();
             this.sideBar.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,9 +96,9 @@
             this.sideBar.BackColor = System.Drawing.Color.IndianRed;
             this.sideBar.Controls.Add(this.panel15);
             this.sideBar.Controls.Add(this.monitoreoContainer);
+            this.sideBar.Controls.Add(this.empaqueContainer);
             this.sideBar.Controls.Add(this.controlCalidadContainer);
             this.sideBar.Controls.Add(this.cosechaRecepcionContainer);
-            this.sideBar.Controls.Add(this.empaqueContainer);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 0);
             this.sideBar.MaximumSize = new System.Drawing.Size(218, 450);
@@ -247,7 +247,7 @@
             this.controlCalidadContainer.Controls.Add(this.panel10);
             this.controlCalidadContainer.Controls.Add(this.panel8);
             this.controlCalidadContainer.Controls.Add(this.panel3);
-            this.controlCalidadContainer.Location = new System.Drawing.Point(3, 186);
+            this.controlCalidadContainer.Location = new System.Drawing.Point(3, 240);
             this.controlCalidadContainer.MaximumSize = new System.Drawing.Size(218, 194);
             this.controlCalidadContainer.MinimumSize = new System.Drawing.Size(218, 46);
             this.controlCalidadContainer.Name = "controlCalidadContainer";
@@ -301,24 +301,12 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Salmon;
-            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.btnConteo);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 48);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(218, 48);
             this.panel8.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(-11, -10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(243, 64);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Conteo de Fruta";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -335,7 +323,7 @@
             this.btnControlCalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnControlCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControlCalidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnControlCalidad.Location = new System.Drawing.Point(-11, -7);
+            this.btnControlCalidad.Location = new System.Drawing.Point(-11, -4);
             this.btnControlCalidad.Name = "btnControlCalidad";
             this.btnControlCalidad.Size = new System.Drawing.Size(243, 64);
             this.btnControlCalidad.TabIndex = 4;
@@ -348,7 +336,7 @@
             this.cosechaRecepcionContainer.Controls.Add(this.panel12);
             this.cosechaRecepcionContainer.Controls.Add(this.panel11);
             this.cosechaRecepcionContainer.Controls.Add(this.panel4);
-            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(3, 238);
+            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(3, 292);
             this.cosechaRecepcionContainer.MaximumSize = new System.Drawing.Size(243, 145);
             this.cosechaRecepcionContainer.MinimumSize = new System.Drawing.Size(243, 48);
             this.cosechaRecepcionContainer.Name = "cosechaRecepcionContainer";
@@ -430,7 +418,7 @@
             this.empaqueContainer.Controls.Add(this.panel1);
             this.empaqueContainer.Controls.Add(this.panel5);
             this.empaqueContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.empaqueContainer.Location = new System.Drawing.Point(3, 292);
+            this.empaqueContainer.Location = new System.Drawing.Point(3, 186);
             this.empaqueContainer.MaximumSize = new System.Drawing.Size(218, 96);
             this.empaqueContainer.MinimumSize = new System.Drawing.Size(218, 48);
             this.empaqueContainer.Name = "empaqueContainer";
@@ -506,12 +494,26 @@
             this.empaqueTimer.Interval = 10;
             this.empaqueTimer.Tick += new System.EventHandler(this.empaqueTimer_Tick);
             // 
+            // btnConteo
+            // 
+            this.btnConteo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConteo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConteo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnConteo.Location = new System.Drawing.Point(-11, -10);
+            this.btnConteo.Name = "btnConteo";
+            this.btnConteo.Size = new System.Drawing.Size(243, 64);
+            this.btnConteo.TabIndex = 4;
+            this.btnConteo.Text = "Conteo de Fruta";
+            this.btnConteo.UseVisualStyleBackColor = true;
+            this.btnConteo.Click += new System.EventHandler(this.btnConteo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.sideBar);
+            this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -561,7 +563,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer controlCalidadTimer;
         private System.Windows.Forms.Panel cosechaRecepcionContainer;
         private System.Windows.Forms.Button btnCosechaRecepcion;
@@ -581,6 +582,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClasificacionFinal;
         private System.Windows.Forms.Timer empaqueTimer;
+        private System.Windows.Forms.Button btnConteo;
     }
 }
 
