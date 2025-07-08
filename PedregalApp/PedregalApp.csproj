@@ -70,6 +70,24 @@
     <Compile Include="FormControlCalidad.Designer.cs">
       <DependentUpon>FormControlCalidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormOrdenRecoleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrdenRecoleccion.Designer.cs">
+      <DependentUpon>FormOrdenRecoleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenedorDisponibilidadPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorDisponibilidadPersonal.Designer.cs">
+      <DependentUpon>MantenedorDisponibilidadPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenedorRecoleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorRecoleccion.Designer.cs">
+      <DependentUpon>MantenedorRecoleccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -83,6 +101,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormControlCalidad.resx">
       <DependentUpon>FormControlCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrdenRecoleccion.resx">
+      <DependentUpon>FormOrdenRecoleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorDisponibilidadPersonal.resx">
+      <DependentUpon>MantenedorDisponibilidadPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -43,13 +43,16 @@
   <ItemGroup>
     <Compile Include="entArbol.cs" />
     <Compile Include="entArbolMostrar.cs" />
+    <Compile Include="entBin.cs" />
     <Compile Include="entClasificacion.cs" />
     <Compile Include="entConteo.cs" />
     <Compile Include="entCortina.cs" />
+    <Compile Include="entDisponibilidadPersonal.cs" />
     <Compile Include="entEmpleado.cs" />
     <Compile Include="entFruto.cs" />
     <Compile Include="entLinea.cs" />
     <Compile Include="entLote.cs" />
+    <Compile Include="entOrdenRecoleccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -42,12 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logArbol.cs" />
+    <Compile Include="logBin.cs" />
     <Compile Include="logClasificacion.cs" />
     <Compile Include="logCortina.cs" />
+    <Compile Include="logDisponibilidadPersonal.cs" />
     <Compile Include="logEmpleado.cs" />
     <Compile Include="logFruto.cs" />
     <Compile Include="logLinea.cs" />
     <Compile Include="logLote.cs" />
+    <Compile Include="logOrdenRecoleccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

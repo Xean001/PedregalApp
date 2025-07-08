@@ -43,12 +43,15 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="datArbol.cs" />
+    <Compile Include="datBin.cs" />
     <Compile Include="datClasificacion.cs" />
     <Compile Include="datCortina.cs" />
+    <Compile Include="datDisponibilidadPersonal.cs" />
     <Compile Include="datEmpleado.cs" />
     <Compile Include="datFruto.cs" />
     <Compile Include="datLinea.cs" />
     <Compile Include="datLote.cs" />
+    <Compile Include="datOrdenRecoleccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
