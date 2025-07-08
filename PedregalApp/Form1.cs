@@ -19,6 +19,7 @@ namespace PedregalApp
         bool empaqueCollapse;
         FormControlCalidad formControlCalidad;
         FormArbol formArbol;
+        FormCategorizacion formCategorizacion;
         public Form1()
         {
             InitializeComponent();
@@ -181,6 +182,25 @@ namespace PedregalApp
         private void formArbol_FormClosed(object sender, FormClosedEventArgs e)
         {
             formArbol = null;
+        }
+
+        private void btnCategorizacion_Click(object sender, EventArgs e)
+        {
+            if (formCategorizacion == null)
+            {
+                formCategorizacion = new FormCategorizacion();
+                formCategorizacion.FormClosed += formCategorizacion_FormClosed;
+                formCategorizacion.MdiParent = this;
+                formCategorizacion.Show();
+            }
+            else
+            {
+                formCategorizacion.Activate();
+            }
+        }
+        private void formCategorizacion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            formCategorizacion = null;
         }
     }
 }

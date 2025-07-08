@@ -58,6 +58,12 @@
     <Compile Include="FormArbol.Designer.cs">
       <DependentUpon>FormArbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCategorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategorizacion.Designer.cs">
+      <DependentUpon>FormCategorizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormControlCalidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormArbol.resx">
       <DependentUpon>FormArbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategorizacion.resx">
+      <DependentUpon>FormCategorizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormControlCalidad.resx">
       <DependentUpon>FormControlCalidad.cs</DependentUpon>

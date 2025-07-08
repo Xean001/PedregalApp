@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class entEmpleado
+    public class entClasificacion
     {
-        public int id_empleado { get; set; }
+        
+        public int id_clasificacion { get; set; }
         public string nombre { get; set; }
-        public string cargo { get; set; }
-        public string dni { get; set; }
-        public string estado { get; set; }
     }
 }
+

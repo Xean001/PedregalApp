@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="entArbol.cs" />
     <Compile Include="entArbolMostrar.cs" />
+    <Compile Include="entClasificacion.cs" />
     <Compile Include="entConteo.cs" />
     <Compile Include="entCortina.cs" />
     <Compile Include="entEmpleado.cs" />
+    <Compile Include="entFruto.cs" />
     <Compile Include="entLinea.cs" />
     <Compile Include="entLote.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

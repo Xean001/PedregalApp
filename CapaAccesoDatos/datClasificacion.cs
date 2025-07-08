@@ -9,32 +9,28 @@ using CapaEntidad;
 
 namespace CapaAccesoDatos
 {
-
-    public class datEmpleado
+    public class datClasificacion
     {
-        private static readonly datEmpleado _instancia = new datEmpleado();
-        public static datEmpleado Instancia => _instancia;
-
-        public List<entEmpleado> ListarEmpleados()
+        private static readonly datClasificacion _instancia = new datClasificacion();
+        public static datClasificacion Instancia => _instancia;
+        public List<entClasificacion> ListarClasificaciones()
         {
             SqlCommand cmd = null;
-            List<entEmpleado> lista = new List<entEmpleado>();
+            List<entClasificacion> lista = new List<entClasificacion>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarEmpleados", cn);
+                cmd = new SqlCommand("spListarClasificaciones", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
+
                 while (dr.Read())
                 {
-                    lista.Add(new entEmpleado
-                    {
-                        id_empleado = Convert.ToInt32(dr["id_empleado"]),
-                        nombre = dr["nombre"].ToString(),
-                        cargo = dr["cargo"].ToString(),
-                        dni = dr["dni"].ToString()
-                    });
+                    entClasificacion c = new entClasificacion();
+                    c.id_clasificacion = Convert.ToInt32(dr["id_clasificacion"]);
+                    c.nombre = dr["nombre"].ToString();
+                    lista.Add(c);
                 }
             }
             catch (Exception e)
@@ -45,6 +41,7 @@ namespace CapaAccesoDatos
             {
                 cmd.Connection.Close();
             }
+
             return lista;
         }
     }

@@ -50,7 +50,7 @@
             this.btnEmpaque = new System.Windows.Forms.Button();
             this.controlCalidadContainer = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCategorizacion = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnConteo = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -306,30 +306,31 @@
             this.controlCalidadContainer.MaximumSize = new System.Drawing.Size(216, 145);
             this.controlCalidadContainer.MinimumSize = new System.Drawing.Size(216, 46);
             this.controlCalidadContainer.Name = "controlCalidadContainer";
-            this.controlCalidadContainer.Size = new System.Drawing.Size(216, 48);
+            this.controlCalidadContainer.Size = new System.Drawing.Size(216, 46);
             this.controlCalidadContainer.TabIndex = 6;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Salmon;
-            this.panel10.Controls.Add(this.button5);
+            this.panel10.Controls.Add(this.btnCategorizacion);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 96);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(216, 48);
             this.panel10.TabIndex = 8;
             // 
-            // button5
+            // btnCategorizacion
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(-12, -10);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(243, 64);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Categorizacion";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCategorizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorizacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCategorizacion.Location = new System.Drawing.Point(-12, -10);
+            this.btnCategorizacion.Name = "btnCategorizacion";
+            this.btnCategorizacion.Size = new System.Drawing.Size(243, 64);
+            this.btnCategorizacion.TabIndex = 7;
+            this.btnCategorizacion.Text = "Categorizacion";
+            this.btnCategorizacion.UseVisualStyleBackColor = true;
+            this.btnCategorizacion.Click += new System.EventHandler(this.btnCategorizacion_Click);
             // 
             // panel8
             // 
@@ -384,7 +385,7 @@
             this.cosechaRecepcionContainer.Controls.Add(this.panel12);
             this.cosechaRecepcionContainer.Controls.Add(this.panel11);
             this.cosechaRecepcionContainer.Controls.Add(this.panel4);
-            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(2, 288);
+            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(2, 286);
             this.cosechaRecepcionContainer.Margin = new System.Windows.Forms.Padding(2);
             this.cosechaRecepcionContainer.MaximumSize = new System.Drawing.Size(217, 152);
             this.cosechaRecepcionContainer.MinimumSize = new System.Drawing.Size(217, 48);
@@ -538,7 +539,7 @@
         private System.Windows.Forms.Timer monitoreoTimer;
         private System.Windows.Forms.Panel controlCalidadContainer;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCategorizacion;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Timer controlCalidadTimer;
         private System.Windows.Forms.Panel cosechaRecepcionContainer;

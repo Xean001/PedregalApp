@@ -9,33 +9,28 @@ using CapaEntidad;
 
 namespace CapaAccesoDatos
 {
-    public class datCortina
-    {
-        private static readonly datCortina _instancia = new datCortina();
-        public static datCortina Instancia => _instancia;
+    public class datFruto
 
-        public List<entCortina> ListarCortinasPorLote(int idLote)
+    {
+        private static readonly datFruto _instancia = new datFruto();
+        public static datFruto Instancia => _instancia;
+
+        public bool InsertarFruto(entFruto f)
         {
             SqlCommand cmd = null;
-            List<entCortina> lista = new List<entCortina>();
-
+            bool exito = false;
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarCortinasPorLote", cn);
+                cmd = new SqlCommand("spInsertarFruto", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_lote", idLote);
+                cmd.Parameters.AddWithValue("@id_arbol", f.id_arbol);
+                cmd.Parameters.AddWithValue("@id_empleado", f.id_empleado);
+                cmd.Parameters.AddWithValue("@peso", f.peso);
+                cmd.Parameters.AddWithValue("@clasificacion", f.clasificacion);
+                cmd.Parameters.AddWithValue("@cantidad", f.cantidad);
                 cn.Open();
-
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    entCortina c = new entCortina();
-                    c.id_cor = Convert.ToInt32(dr["id_cor"]);
-                    c.nom_cor = dr["nom_cor"].ToString();
-                    c.id_lot = Convert.ToInt32(dr["id_lot"]);
-                    lista.Add(c);
-                }
+                exito = cmd.ExecuteNonQuery() > 0;
             }
             catch (Exception e)
             {
@@ -45,9 +40,32 @@ namespace CapaAccesoDatos
             {
                 cmd.Connection.Close();
             }
-
-            return lista;
+            return exito;
         }
+        public bool InhabilitarFruto(int id_fruto)
+        {
+            SqlCommand cmd = null;
+            bool exito = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInhabilitarFruto", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_fruto", id_fruto);
+                cn.Open();
+                exito = cmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null) cmd.Connection.Close();
+            }
+            return exito;
+        }
+
         public List<entFruto> ListarFrutosPorArbol(int idArbol)
         {
             List<entFruto> lista = new List<entFruto>();
@@ -89,4 +107,9 @@ namespace CapaAccesoDatos
         }
 
     }
+
 }
+
+
+    
+
