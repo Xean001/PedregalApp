@@ -87,7 +87,7 @@ namespace PedregalApp
             try
             {
                 dgvDatos.DataSource = logArbol.Instancia.ListarArbolesCompleto();
-               
+
 
                 // Ocultar la columna id_arbol
                 if (dgvDatos.Columns["id_arbol"] != null)
@@ -148,12 +148,61 @@ namespace PedregalApp
             entArbolMostrar arbol = logArbol.Instancia.BuscarArbolPorCodigo(codigo);
             if (arbol != null)
             {
-                dgvDatos.Rows.Clear();
-                dgvDatos.Rows.Add(arbol.codigo, arbol.estado, arbol.nombre_lote, arbol.nombre_cortina, arbol.nombre_linea);
+                // Usa DataSource en lugar de Add()
+                dgvDatos.DataSource = new List<entArbolMostrar> { arbol };
+
+                // Opcional: ocultar la columna ID si no quieres verla
+                dgvDatos.Columns["id_arbol"].Visible = false;
             }
             else
             {
                 MessageBox.Show("Árbol no encontrado.");
+            }
+        }
+
+        private void btnInhabilitar_Click(object sender, EventArgs e)
+        {
+            {
+                string codigo = txtBuscar.Text.Trim();
+                if (codigo == "") return;
+
+                DialogResult result = MessageBox.Show("¿Deseas inhabilitar este árbol?", "Confirmación", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    bool exito = logArbol.Instancia.InhabilitarArbol(codigo);
+                    if (exito)
+                    {
+                        MessageBox.Show("Árbol inhabilitado correctamente.");
+                        dgvDatos.DataSource = logArbol.Instancia.ListarArbolesCompleto(); // Recarga tabla
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo inhabilitar el árbol.");
+                    }
+                }
+            }
+        }
+
+        private void btnEditarArbol_Click(object sender, EventArgs e)
+        {
+            {
+                string codigo = txtBuscar.Text.Trim();
+                if (codigo == "") return;
+
+                DialogResult result = MessageBox.Show("¿Deseas reactivar este árbol?", "Confirmación", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    bool exito = logArbol.Instancia.ActivarArbol(codigo);
+                    if (exito)
+                    {
+                        MessageBox.Show("Árbol reactivado correctamente.");
+                        dgvDatos.DataSource = logArbol.Instancia.ListarArbolesCompleto(); // Actualizar la tabla
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo reactivar el árbol.");
+                    }
+                }
             }
         }
     }

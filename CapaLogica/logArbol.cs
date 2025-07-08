@@ -30,6 +30,14 @@ namespace CapaLogica
         {
             return datArbol.Instancia.BuscarArbolPorCodigo(codigo);
         }
+        public bool InhabilitarArbol(string codigo)
+        {
+            return datArbol.Instancia.InhabilitarArbol(codigo);
+        }
+        public bool ActivarArbol(string codigo)
+        {
+            return datArbol.Instancia.ActivarArbol(codigo);
+        }
 
 
     }

@@ -30,10 +30,12 @@
         {
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnAnularArbol = new System.Windows.Forms.Button();
+            this.btnInhabilitar = new System.Windows.Forms.Button();
             this.btnEditarArbol = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRegistrarArbol = new System.Windows.Forms.Button();
             this.cmbLinea = new System.Windows.Forms.ComboBox();
             this.cmbLote = new System.Windows.Forms.ComboBox();
@@ -44,8 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
@@ -67,14 +67,15 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Mantenedor de Arbol";
             // 
-            // btnAnularArbol
+            // btnInhabilitar
             // 
-            this.btnAnularArbol.Location = new System.Drawing.Point(307, 178);
-            this.btnAnularArbol.Name = "btnAnularArbol";
-            this.btnAnularArbol.Size = new System.Drawing.Size(85, 36);
-            this.btnAnularArbol.TabIndex = 30;
-            this.btnAnularArbol.Text = "Anular Arbol";
-            this.btnAnularArbol.UseVisualStyleBackColor = true;
+            this.btnInhabilitar.Location = new System.Drawing.Point(307, 178);
+            this.btnInhabilitar.Name = "btnInhabilitar";
+            this.btnInhabilitar.Size = new System.Drawing.Size(85, 36);
+            this.btnInhabilitar.TabIndex = 30;
+            this.btnInhabilitar.Text = "Inhabilitar Arbol";
+            this.btnInhabilitar.UseVisualStyleBackColor = true;
+            this.btnInhabilitar.Click += new System.EventHandler(this.btnInhabilitar_Click);
             // 
             // btnEditarArbol
             // 
@@ -84,6 +85,7 @@
             this.btnEditarArbol.TabIndex = 29;
             this.btnEditarArbol.Text = "Editar Arbol";
             this.btnEditarArbol.UseVisualStyleBackColor = true;
+            this.btnEditarArbol.Click += new System.EventHandler(this.btnEditarArbol_Click);
             // 
             // btnBuscar
             // 
@@ -104,7 +106,7 @@
             this.groupBox1.Controls.Add(this.btnRegistrarArbol);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.cmbLinea);
-            this.groupBox1.Controls.Add(this.btnAnularArbol);
+            this.groupBox1.Controls.Add(this.btnInhabilitar);
             this.groupBox1.Controls.Add(this.cmbLote);
             this.groupBox1.Controls.Add(this.btnEditarArbol);
             this.groupBox1.Controls.Add(this.txtCantidadArboles);
@@ -121,6 +123,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "si ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(393, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 16);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Codigo de Arbol:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(523, 19);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(55, 20);
+            this.textBox1.TabIndex = 33;
+            // 
             // btnRegistrarArbol
             // 
             this.btnRegistrarArbol.Location = new System.Drawing.Point(49, 178);
@@ -134,7 +153,7 @@
             // cmbLinea
             // 
             this.cmbLinea.FormattingEnabled = true;
-            this.cmbLinea.Location = new System.Drawing.Point(140, 55);
+            this.cmbLinea.Location = new System.Drawing.Point(102, 120);
             this.cmbLinea.Name = "cmbLinea";
             this.cmbLinea.Size = new System.Drawing.Size(91, 21);
             this.cmbLinea.TabIndex = 19;
@@ -142,7 +161,7 @@
             // cmbLote
             // 
             this.cmbLote.FormattingEnabled = true;
-            this.cmbLote.Location = new System.Drawing.Point(140, 135);
+            this.cmbLote.Location = new System.Drawing.Point(102, 53);
             this.cmbLote.Name = "cmbLote";
             this.cmbLote.Size = new System.Drawing.Size(91, 21);
             this.cmbLote.TabIndex = 17;
@@ -166,7 +185,7 @@
             // cmbCortina
             // 
             this.cmbCortina.FormattingEnabled = true;
-            this.cmbCortina.Location = new System.Drawing.Point(140, 97);
+            this.cmbCortina.Location = new System.Drawing.Point(102, 86);
             this.cmbCortina.Name = "cmbCortina";
             this.cmbCortina.Size = new System.Drawing.Size(91, 21);
             this.cmbCortina.TabIndex = 14;
@@ -176,7 +195,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 98);
+            this.label6.Location = new System.Drawing.Point(36, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 9;
@@ -186,7 +205,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(58, 136);
+            this.label4.Location = new System.Drawing.Point(55, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 5;
@@ -196,7 +215,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(58, 56);
+            this.label3.Location = new System.Drawing.Point(36, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 4;
@@ -211,23 +230,6 @@
             this.label2.Size = new System.Drawing.Size(153, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Cantidad de Arboles:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(523, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(55, 20);
-            this.textBox1.TabIndex = 33;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(393, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 16);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Codigo de Arbol:";
             // 
             // FormArbol
             // 
@@ -251,7 +253,7 @@
 
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnAnularArbol;
+        private System.Windows.Forms.Button btnInhabilitar;
         private System.Windows.Forms.Button btnEditarArbol;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;

@@ -140,5 +140,56 @@ namespace CapaAccesoDatos
             }
             return inserta;
         }
+        public bool InhabilitarArbol(string codigo)
+        {
+            SqlCommand cmd = null;
+            bool actualizado = false;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInhabilitarArbol", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+                cn.Open();
+                actualizado = cmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+
+            return actualizado;
+        }
+        public bool ActivarArbol(string codigo)
+        {
+            SqlCommand cmd = null;
+            bool actualizado = false;
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spActivarArbol", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@codigo", codigo);
+                cn.Open();
+                actualizado = cmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+
+            return actualizado;
+        }
+
     }
 }
