@@ -13,9 +13,24 @@ namespace CapaLogica
         private static readonly logArbol _instancia = new logArbol();
         public static logArbol Instancia => _instancia;
 
-        public List<entArbol> ListarArbolesPorLinea(int idLinea)
+        public int ObtenerTotalArboles(int idLinea)
         {
-            return datArbol.Instancia.ListarArbolesPorLinea(idLinea);
+            return datArbol.Instancia.ObtenerCantidadArbolesPorLinea(idLinea);
         }
+
+        public bool RegistrarArbol(entArbol a)
+        {
+            return datArbol.Instancia.InsertarArbol(a);
+        }
+        public List<entArbolMostrar> ListarArbolesCompleto()
+        {
+            return datArbol.Instancia.ListarArbolesCompleto();
+        }
+        public entArbolMostrar BuscarArbolPorCodigo(string codigo)
+        {
+            return datArbol.Instancia.BuscarArbolPorCodigo(codigo);
+        }
+
+
     }
 }

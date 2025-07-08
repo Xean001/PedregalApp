@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logArbol.cs" />
-    <Compile Include="logConteo.cs" />
     <Compile Include="logCortina.cs" />
     <Compile Include="logEmpleado.cs" />
     <Compile Include="logLinea.cs" />

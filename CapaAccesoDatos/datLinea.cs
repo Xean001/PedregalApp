@@ -22,7 +22,7 @@ namespace CapaAccesoDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarLineaPorCortina", cn);
+                cmd = new SqlCommand("spListarLineasPorCortina", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id_cor", idCortina);
                 cn.Open();
@@ -33,7 +33,7 @@ namespace CapaAccesoDatos
                     entLinea l = new entLinea();
                     l.id_lin = Convert.ToInt32(dr["id_lin"]);
                     l.id_cor = Convert.ToInt32(dr["id_cor"]);
-                    l.num_lin = Convert.ToInt32(dr["num_lin"]);
+                    l.nom_lin = dr["nom_lin"].ToString();
                     lista.Add(l);
                 }
             }
@@ -43,7 +43,7 @@ namespace CapaAccesoDatos
             }
             finally
             {
-                cmd?.Connection.Close();
+                cmd.Connection.Close();
             }
 
             return lista;

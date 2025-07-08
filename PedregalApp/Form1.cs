@@ -18,6 +18,7 @@ namespace PedregalApp
         bool cosechaRecepcionCollapse;
         bool empaqueCollapse;
         FormControlCalidad formControlCalidad;
+        FormArbol formArbol;
         public Form1()
         {
             InitializeComponent();
@@ -164,22 +165,22 @@ namespace PedregalApp
 
         private void btnConteo_Click(object sender, EventArgs e)
         {
-            if (formControlCalidad == null)
+            if (formArbol == null)
             {
-                formControlCalidad = new FormControlCalidad();
-                formControlCalidad.FormClosed += formControlCalidad_FormClosed;
-                formControlCalidad.MdiParent = this;
-                formControlCalidad.Show();
+                formArbol = new FormArbol();
+                formArbol.FormClosed += formArbol_FormClosed;
+                formArbol.MdiParent = this;
+                formArbol.Show();
             }
             else
             {
-                formControlCalidad.Activate();
+                formArbol.Activate();
             }
         }
            
-        private void formControlCalidad_FormClosed(object sender, FormClosedEventArgs e)
+        private void formArbol_FormClosed(object sender, FormClosedEventArgs e)
         {
-            formControlCalidad = null;
+            formArbol = null;
         }
     }
 }

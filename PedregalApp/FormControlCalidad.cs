@@ -19,7 +19,7 @@ namespace PedregalApp
             InitializeComponent();
             CargarComboLotes();
             CargarComboEmpleados();
-            ListarConteo();
+          
             cmbLote.SelectedIndexChanged += cmbLote_SelectedIndexChanged;
             cmbCortina.SelectedIndexChanged += cmbCortina_SelectedIndexChanged;
             cmbLinea.SelectedIndexChanged += cmbLinea_SelectedIndexChanged;
@@ -62,26 +62,14 @@ namespace PedregalApp
         {
             if (cmbLinea.SelectedValue is int idLinea)
             {
-                cmbArbol.DataSource = logArbol.Instancia.ListarArbolesPorLinea(idLinea);
+              
                 cmbArbol.DisplayMember = "num_arb";
                 cmbArbol.ValueMember = "id_arb";
             }
         }
 
 
-        public void ListarConteo()
-        {
-            dgvDatos.DataSource = logConteo.Instancia.ListarConteo();
-
-            if (dgvDatos.Columns["id_arb"] != null)
-                dgvDatos.Columns["id_arb"].Visible = false;
-            if (dgvDatos.Columns["id_lot"] != null)
-                dgvDatos.Columns["id_lot"].Visible = false;
-
-            if (dgvDatos.Columns["id_emp"] != null)
-                dgvDatos.Columns["id_emp"].Visible = false;
-            
-        }
+        
 
         private void btnNuevo1_Click(object sender, EventArgs e)
         {
@@ -121,10 +109,10 @@ namespace PedregalApp
                     can_con = cantidad
                 };
 
-                logConteo.Instancia.InsertarConteo(c);
+               
 
                 MessageBox.Show("¡Conteo agregado correctamente!");
-                ListarConteo();
+                
                 groupBox1.Enabled = false;
                 LimpiarVariables();
             }

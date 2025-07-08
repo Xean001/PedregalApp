@@ -8,8 +8,8 @@ namespace CapaEntidad
 {
     public class entCortina
     {
-        public int id_cor { get; set; }
-        public int id_lot { get; set; }
-        public int num_cor { get; set; }
+        public int id_cor { get; set; }       
+        public int id_lot { get; set; }      
+        public string nom_cor { get; set; }   
     }
 }

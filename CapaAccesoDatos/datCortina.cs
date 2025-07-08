@@ -22,28 +22,28 @@ namespace CapaAccesoDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spListarCortinaPorLote", cn);
+                cmd = new SqlCommand("spListarCortinasPorLote", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id_lot", idLote);
+                cmd.Parameters.AddWithValue("@id_lote", idLote);
                 cn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
 
+                SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     entCortina c = new entCortina();
                     c.id_cor = Convert.ToInt32(dr["id_cor"]);
+                    c.nom_cor = dr["nom_cor"].ToString();
                     c.id_lot = Convert.ToInt32(dr["id_lot"]);
-                    c.num_cor = Convert.ToInt32(dr["num_cor"]);
                     lista.Add(c);
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw ex;
+                throw e;
             }
             finally
             {
-                cmd?.Connection.Close();
+                cmd.Connection.Close();
             }
 
             return lista;

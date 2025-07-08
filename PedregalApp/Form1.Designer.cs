@@ -49,8 +49,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEmpaque = new System.Windows.Forms.Button();
             this.controlCalidadContainer = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -81,7 +79,6 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.controlCalidadContainer.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -248,11 +245,11 @@
             this.empaqueContainer.Controls.Add(this.panel5);
             this.empaqueContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.empaqueContainer.Location = new System.Drawing.Point(2, 185);
-            this.empaqueContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.empaqueContainer.MaximumSize = new System.Drawing.Size(164, 78);
-            this.empaqueContainer.MinimumSize = new System.Drawing.Size(164, 39);
+            this.empaqueContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.empaqueContainer.MaximumSize = new System.Drawing.Size(217, 95);
+            this.empaqueContainer.MinimumSize = new System.Drawing.Size(217, 47);
             this.empaqueContainer.Name = "empaqueContainer";
-            this.empaqueContainer.Size = new System.Drawing.Size(164, 48);
+            this.empaqueContainer.Size = new System.Drawing.Size(217, 47);
             this.empaqueContainer.TabIndex = 7;
             // 
             // panel1
@@ -262,7 +259,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(164, 48);
+            this.panel1.Size = new System.Drawing.Size(217, 48);
             this.panel1.TabIndex = 8;
             // 
             // btnClasificacionFinal
@@ -283,7 +280,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(164, 48);
+            this.panel5.Size = new System.Drawing.Size(217, 48);
             this.panel5.TabIndex = 2;
             // 
             // btnEmpaque
@@ -291,7 +288,7 @@
             this.btnEmpaque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpaque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpaque.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEmpaque.Location = new System.Drawing.Point(-12, -7);
+            this.btnEmpaque.Location = new System.Drawing.Point(-12, -6);
             this.btnEmpaque.Name = "btnEmpaque";
             this.btnEmpaque.Size = new System.Drawing.Size(243, 64);
             this.btnEmpaque.TabIndex = 6;
@@ -301,39 +298,16 @@
             // 
             // controlCalidadContainer
             // 
-            this.controlCalidadContainer.Controls.Add(this.panel9);
             this.controlCalidadContainer.Controls.Add(this.panel10);
             this.controlCalidadContainer.Controls.Add(this.panel8);
             this.controlCalidadContainer.Controls.Add(this.panel3);
-            this.controlCalidadContainer.Location = new System.Drawing.Point(2, 237);
-            this.controlCalidadContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.controlCalidadContainer.MaximumSize = new System.Drawing.Size(164, 158);
-            this.controlCalidadContainer.MinimumSize = new System.Drawing.Size(164, 37);
+            this.controlCalidadContainer.Location = new System.Drawing.Point(2, 236);
+            this.controlCalidadContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.controlCalidadContainer.MaximumSize = new System.Drawing.Size(216, 145);
+            this.controlCalidadContainer.MinimumSize = new System.Drawing.Size(216, 46);
             this.controlCalidadContainer.Name = "controlCalidadContainer";
-            this.controlCalidadContainer.Size = new System.Drawing.Size(164, 46);
+            this.controlCalidadContainer.Size = new System.Drawing.Size(216, 48);
             this.controlCalidadContainer.TabIndex = 6;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Salmon;
-            this.panel9.Controls.Add(this.button6);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 144);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(164, 48);
-            this.panel9.TabIndex = 9;
-            // 
-            // button6
-            // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(-15, -14);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(243, 64);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Caida de fruta";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // panel10
             // 
@@ -342,7 +316,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 96);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(164, 48);
+            this.panel10.Size = new System.Drawing.Size(216, 48);
             this.panel10.TabIndex = 8;
             // 
             // button5
@@ -364,7 +338,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 48);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(164, 48);
+            this.panel8.Size = new System.Drawing.Size(216, 48);
             this.panel8.TabIndex = 6;
             // 
             // btnConteo
@@ -372,12 +346,12 @@
             this.btnConteo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConteo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConteo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnConteo.Location = new System.Drawing.Point(-8, -8);
-            this.btnConteo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConteo.Location = new System.Drawing.Point(-2, -4);
+            this.btnConteo.Margin = new System.Windows.Forms.Padding(2);
             this.btnConteo.Name = "btnConteo";
-            this.btnConteo.Size = new System.Drawing.Size(182, 52);
+            this.btnConteo.Size = new System.Drawing.Size(221, 58);
             this.btnConteo.TabIndex = 4;
-            this.btnConteo.Text = "Conteo de Fruta";
+            this.btnConteo.Text = "Codificacion de arbol";
             this.btnConteo.UseVisualStyleBackColor = true;
             this.btnConteo.Click += new System.EventHandler(this.btnConteo_Click);
             // 
@@ -388,7 +362,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 48);
+            this.panel3.Size = new System.Drawing.Size(216, 48);
             this.panel3.TabIndex = 5;
             // 
             // btnControlCalidad
@@ -397,7 +371,7 @@
             this.btnControlCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControlCalidad.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnControlCalidad.Location = new System.Drawing.Point(-8, -3);
-            this.btnControlCalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnControlCalidad.Margin = new System.Windows.Forms.Padding(2);
             this.btnControlCalidad.Name = "btnControlCalidad";
             this.btnControlCalidad.Size = new System.Drawing.Size(243, 64);
             this.btnControlCalidad.TabIndex = 4;
@@ -410,8 +384,8 @@
             this.cosechaRecepcionContainer.Controls.Add(this.panel12);
             this.cosechaRecepcionContainer.Controls.Add(this.panel11);
             this.cosechaRecepcionContainer.Controls.Add(this.panel4);
-            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(2, 287);
-            this.cosechaRecepcionContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cosechaRecepcionContainer.Location = new System.Drawing.Point(2, 288);
+            this.cosechaRecepcionContainer.Margin = new System.Windows.Forms.Padding(2);
             this.cosechaRecepcionContainer.MaximumSize = new System.Drawing.Size(217, 152);
             this.cosechaRecepcionContainer.MinimumSize = new System.Drawing.Size(217, 48);
             this.cosechaRecepcionContainer.Name = "cosechaRecepcionContainer";
@@ -519,7 +493,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.sideBar);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -536,7 +510,6 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.controlCalidadContainer.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -564,8 +537,6 @@
         private System.Windows.Forms.Button btnEvaluacion;
         private System.Windows.Forms.Timer monitoreoTimer;
         private System.Windows.Forms.Panel controlCalidadContainer;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel8;

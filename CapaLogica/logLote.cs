@@ -20,7 +20,7 @@ namespace CapaLogica
         // Métodos
         public List<entLote> ListarLotes()
         {
-            return datConteo.Instancia.ListarLotes();
+            return datLote.Instancia.ListarLotes();
         }
     }
 }

@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class entArbol
+    public class entArbolMostrar
     {
-        public int id_lin { get; set; }
+        public int id_arbol { get; set; }
         public string codigo { get; set; }
         public string estado { get; set; }
+        public string nombre_lote { get; set; }
+        public string nombre_cortina { get; set; }
+        public string nombre_linea { get; set; }
     }
-
 }
+

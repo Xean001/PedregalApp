@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="entArbol.cs" />
+    <Compile Include="entArbolMostrar.cs" />
     <Compile Include="entConteo.cs" />
     <Compile Include="entCortina.cs" />
     <Compile Include="entEmpleado.cs" />
